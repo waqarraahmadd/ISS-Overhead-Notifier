@@ -43,15 +43,15 @@ def is_dark():
 
 
 def send_email():
-    my_email = "waqarpython@gmail.com"
-    password = "nxbfzsvpdqtcoszr"
+    my_email = "" #ENTER YOUR SENDER EMAIL ID HERE
+    password = "" #ENTER YOUR SENDER EMAIL PASSWORD HERE
     content = "The ISS station is right above your location!"
     with smtplib.SMTP(host="smtp.gmail.com", port=587) as connection:
         connection.starttls()
         connection.login(user=my_email, password=password)
         connection.sendmail(
             from_addr=my_email,
-            to_addrs="waqarpython@yahoo.com",
+            to_addrs="", #ENTER RECIPIENT EMAIL ID
             msg=f"subject: LOOK UP! 👆\n\n{content}"
         )
 
